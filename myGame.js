@@ -5,8 +5,7 @@ function computerPlay(){
     return computerSelection
 }
 
-function playRound(){
-    let playerSelection = prompt("Ching Chang Chong?")
+function playRound(playerSelection){
     const computerSelection = computerPlay()
         
 if (computerSelection===playerSelection){
@@ -41,15 +40,47 @@ else if (computerSelection==="Scissors") {
         }
 
 }
-}
-
-function game(){
-
-let playedRound = 0
-
-for (let i=0;i<5;i++){
-    let winner = playRound()
-    window.alert(winner)
-}
 
 }
+
+const buttons = document.querySelectorAll('button')
+
+let playerScore = 0
+let computerScore = 0
+let tieScore = 0
+
+
+
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        playRound(btn.innerHTML)
+        calculateScore(winner)
+    })
+})
+
+function calculateScore (winner) {
+
+    switch (winner) {
+    case 'Player':
+    playerScore = playerScore + 1
+    
+    break
+    
+    case 'Both':
+    computerScore = computerScore + 1
+    
+    break
+    
+    case 'Computer':
+    tieScore = tieScore + 1
+    
+    break   
+    }
+
+    document.getElementById('player-score').innerHTML = playerScore
+    document.getElementById('tie-score').innerHTML = tieScore
+    document.getElementById('computer-score').innerHTML = computerScore
+
+    console.log(winner)
+    }

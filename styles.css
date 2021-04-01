@@ -1,10 +1,9 @@
 
 header {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-
-}
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
   h1 {
     color: white;
@@ -17,12 +16,12 @@ body {
   }
   
 
-  p{
+p {
     margin:0;
     padding:3px 0 3px 0;
   }
 
-  score {
+score {
     display: flex;
     justify-content: space-between;
     padding:0 20% 0 20%;
@@ -30,7 +29,7 @@ body {
     text-align: center;
   }
 
-  score-box {
+score-box {
     display: flex;
     flex-direction: column;
   }
@@ -42,10 +41,10 @@ game-wrapper {
 }
 
 #game-option {
-margin: 0 20px 0 20px;
-width: 80px;
-height: 50px;
-border-radius: 5px;
+  margin: 0 20px 0 20px;
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
 
 }
 #game-option:hover {
